@@ -21,6 +21,14 @@ export default class Dashboard extends Component {
       </div>
     )
   }
+  componentWillReceiveProps(){
+    console.log('componentWillReceiveProps');
+    
+  }
+  shouldComponentUpdate(){
+    console.log('shouldComponentUpdate');
+    
+  }
   componentWillUnmount() {
     console.log('componentWillUnmount');
   }
