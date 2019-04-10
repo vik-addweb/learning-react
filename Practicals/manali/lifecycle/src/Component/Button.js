@@ -26,6 +26,7 @@ class App extends Component {
     }
     shouldComponentUpdate(){
       console.log("Should Component Update in button")
+      return true;
     }
   render() {
     return (

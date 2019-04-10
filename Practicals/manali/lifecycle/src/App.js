@@ -5,7 +5,7 @@ import Button from './Component/Button';
 class App extends Component {
   constructor(props){
     super();
-    this.state={Increment:0 , Decrement:0}
+    this.state={Count:0 }
   }
   componentWillMount(){
     console.log("Component will mount")
@@ -23,19 +23,19 @@ class App extends Component {
     console.log("Component will Unmount")
   }
   handleIncrement=(e)=>{
-    this.setState({Increment:this.state.Increment+1})
+    this.setState({Count:this.state.Count+1})
   }
   handleDecrement=(e)=>{
-    this.setState({Decremnt:this.state.Decrement+1})
+    this.setState({Count:this.state.Count-1})
   }
   render() {
     console.log("in render")
     return (
       <div >
-        <p>Number of click of Increment{this.state.Increment}</p>
-        <p>Number of click of Decrement{this.state.Decrement}</p>
+        <p>Count{this.state.Count}</p>
+      
        <Button name="Increment" incrementClick={this.handleIncrement}/>
-       <Button name="Decrement" decrementClick={this.handledecrement}/>
+       <Button name="Decrement" decrementClick={this.handleDecrement}/>
       </div>
     );
   }
