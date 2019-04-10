@@ -13,13 +13,16 @@ class LifeCycaleA extends Component {
     console.log('LifeCycaleA constructor')
   }
 
-  static getDerivedStateFromProps(props, state) {
-    console.log('LifeCycaleA getDerivedStateFromProps')
-    return null
+  componentWillMount() {
+    console.log('LifeCycaleA componentWillMount')
   }
 
   componentDidMount() {
     console.log('LifeCycaleA componentDidMount');
+  }
+
+  componentWillReceiveProps() {
+    console.log('LifeCycaleA componentWillReceiveProps');
   }
 
   shouldComponentUpdate() {
@@ -27,13 +30,16 @@ class LifeCycaleA extends Component {
     return true
   }
 
-  getSnapshotBeforeUpdate() {
-    console.log('LifeCycaleA getSnapshotBeforeUpdate');
-    return null
+  componentWillUpdate() {
+    console.log('LifeCycaleA componentWillUpdate');
   }
 
   componentDidUpdate() {
     console.log('LifeCycaleA componentDidUpdate');
+  }
+
+  componentWillUnmount() {
+    console.log('LifeCycaleA componentWillUnmount');    
   }
 
   changeState = () => {

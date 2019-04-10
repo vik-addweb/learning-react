@@ -11,27 +11,33 @@ class LifeCycaleC extends Component {
     console.log('LifeCycaleC constructor')
   }
 
-  static getDerivedStateFromProps(props, state) {
-    console.log('LifeCycaleC getDerivedStateFromProps')
-    return null
+  componentWillMount() {
+    console.log('LifeCycaleC componentWillMount')
   }
 
   componentDidMount() {
     console.log('LifeCycaleC componentDidMount');
   }
-    
+
+  componentWillReceiveProps() {
+    console.log('LifeCycaleC componentWillReceiveProps');
+  }
+
   shouldComponentUpdate() {
     console.log('LifeCycaleC shouldComponentUpdate');
     return true
   }
 
-  getSnapshotBeforeUpdate() {
-    console.log('LifeCycaleC getSnapshotBeforeUpdate');    
-    return null
+  componentWillUpdate() {
+    console.log('LifeCycaleC componentWillUpdate');
   }
 
   componentDidUpdate() {
-    console.log('LifeCycaleC componentDidUpdate');    
+    console.log('LifeCycaleC componentDidUpdate');
+  }
+
+  componentWillUnmount() {
+    console.log('LifeCycaleC componentWillUnmount');    
   }
     
   changeState = () => {

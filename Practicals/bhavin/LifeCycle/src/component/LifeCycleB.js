@@ -11,27 +11,33 @@ class LifeCycaleB extends Component {
     console.log('LifeCycaleB constructor')
   }
 
-  static getDerivedStateFromProps(props, state) {
-    console.log('LifeCycaleB getDerivedStateFromProps')
-    return null
+  componentWillMount() {
+    console.log('LifeCycaleB componentWillMount')
   }
 
   componentDidMount() {
     console.log('LifeCycaleB componentDidMount');
   }
-    
+
+  componentWillReceiveProps() {
+    console.log('LifeCycaleB componentWillReceiveProps');
+  }
+
   shouldComponentUpdate() {
     console.log('LifeCycaleB shouldComponentUpdate');
     return true
   }
 
-  getSnapshotBeforeUpdate() {
-    console.log('LifeCycaleB getSnapshotBeforeUpdate');    
-    return null
+  componentWillUpdate() {
+    console.log('LifeCycaleB componentWillUpdate');
   }
 
   componentDidUpdate() {
-    console.log('LifeCycaleB componentDidUpdate');    
+    console.log('LifeCycaleB componentDidUpdate');
+  }
+
+  componentWillUnmount() {
+    console.log('LifeCycaleB componentWillUnmount');    
   }
     
   changeState = () => {
