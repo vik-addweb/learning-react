@@ -20,6 +20,7 @@ function Inputs(props) {
     
          
       <Input
+        name={props.name}
         type={props.type}
         value={props.value}
         onChange={props.handlechange}
